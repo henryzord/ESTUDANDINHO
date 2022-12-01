@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/aula.css') }}">
+</head>
+<body>
+
+{% autoescape false %}
+
+{{ meu_novo_paragrafo }}
+
+{% endautoescape %}
+<a href="{{ url_for('pagina_da_copa')}}">Richas na copa</a>
+
+<br/>
+
+<label for="meu_seletor"> Qual o melhor jogador do Brasil?</label>
+<select id="meu_seletor">
+    {% autoescape false %}
+    
+    {{ meu_seletor }}
+
+    {% endautoescape %}
+</select>
+<button id="botao_enviar"> ENVIAR! </button>
+
+<img class="pombozo" src="{{ url_for('static', filename='IMG/POMBO.png')}}">
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Jurema na Cozinha</title>
+        <link rel="stylesheet" id="white_theme" href="../FODA/CSS/pagina.css">
+        <link rel='icon' type='image/jpg' href="../FODA/IMG/RISOTO.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+            <main>
+                <header class="principal">
+                    <div class="faixa">
+                        <div class="logo">
+                            <img class="juju" src="../FODA/IMG/JUREMA.png">
+                        </div>
+                    </div>
+                    <div class="busca">
+                        <input placeholder="Pesquise" class="bagulhin" type="text" id="barier"></input>
+                    </div>
+                </header>
+                <div class="barra">
+                    <input type="checkbox" id="check">
+                        <label class="treco" for="check">
+                            <img class="menu" src="../FODA/IMG/MENU.png">
+                        </label>
+                    <nav class="side">
+                        <ul>
+                            <li><a href="./pagina.html"><img class="home" src="../FODA/IMG/HOME.png"></a></li>
+                            <li><a href="./template1.html"><img class="receita" src="../FODA/IMG/RECEITAS.png"></a></li>
+                            <div class="bagu">
+                                <input type="checkbox" id="set">
+                                    <label class="trem" for="set">
+                                        <li><img class="config" src="../FODA/IMG/SETINGS.png"></li>
+                                    </label>
+                                </input>
+                                <div class="config-fundo">
+                                    <div class="container">
+                                        <div class="toggle-wrapper">
+                                            <label class="switch">
+                                                <input type="checkbox" id="hidden" name="theme"/>
+                                                    <div id="slider">
+                                                        <img id="lua" src="../FODA/IMG/LUA.png">
+                                                            <div id="button">
+                                                            </div>
+                                                        <img id="sol" src="../FODA/IMG/SOL.png">
+                                                    </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <li><a href=""><img class="insta" src="../FODA/IMG/INSTA.png"></a></li>
+                            <li><a href=""><img class="whats" src="../FODA/IMG/WHATS.png"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </main>
+            
+            <div class="fundo3">
+                
+            </div>
+            <section>
+                <div class="cronometro">
+                    <h1>CRONÔMETRO</h1>
+                    <div class="row">
+                        <div class="crono">
+                            <p id="tempo">
+                                <span id="horas">01</span>:<span id="minutos">10</span>:<span id="segundos">00</span>
+                            </p>
+                            <div class="botones">
+                                <button onclick="iniciar()" class="iniciar"><img class="play" src="../FODA/IMG/PLAY.png"></button>
+                                <button onclick="parar()" class="parar"><img class="pause" src="../FODA/IMG/PAUSE.png"></button>
+                                <button onclick="resetar()" class="resetar"><img class="reset" src="../FODA/IMG/RESET.png"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="display">
+                        <h3></h3>
+                    </div>
+                </div>
+            </section>
+    <script type="text/javascript" src="../FODA/JS/template2.js"></script>
+    </body>
+
+</html>
