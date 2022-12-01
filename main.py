@@ -1,3 +1,5 @@
+import sqlite3
+
 import flask
 
 def main():
@@ -9,9 +11,24 @@ def main():
 
     @app.route('/', methods = ['GET'])
     def main_page():
+        with sqlite3.connect('static/database/test.db') as con:
+            cur = con.cursor()
+            # retorna uma lista de tuplas
+            answer = cur.execute('SELECT valor, nome FROM jogadores;').fetchall()
+            texto_do_seletor = []
+            for line in answer:
+                texto_do_seletor.append(
+                    '<option value="{0}">{1}</option>'.format(
+                        line[0], line[1]
+                    )
+                )
+            texto_do_seletor = '\n'.join(texto_do_seletor)
+
         return flask.render_template(
             'template3.html',
-             meu_novo_paragrafo='<p>Brasil espanca Sérvia</p>'
+            meu_novo_paragrafo='<p>Brasil espanca Sérvia</p>',
+            meu_seletor=texto_do_seletor
+
         )
 
     @app.route('/copa', methods=['GET'])
